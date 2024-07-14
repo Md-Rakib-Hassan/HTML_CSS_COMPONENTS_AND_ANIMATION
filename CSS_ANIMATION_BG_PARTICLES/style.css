@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.bg{
+    background-image: linear-gradient(#000365,#0086ff);
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+ul li{
+    position: absolute;
+    border: 1px solid #fff;
+    width: 25px;
+    height: 25px;
+    opacity: 0;
+    
+    list-style: none;
+}
+
+.fill ul li{
+    background-color: #fff;
+}
+.square li{
+    top: 80%;
+    left:  10%;
+    animation: square_line 10s linear infinite;
+
+}
+.square li:nth-child(2){
+    
+    top: 50%;
+    left:  45%;
+
+    animation-delay: 2s;
+    
+    
+}
+
+.square li:nth-child(3){
+    top: 80%;
+    left:  80%;
+    animation-delay: 12s;
+    
+}
+
+.square li:nth-child(4){
+    top: 10%;
+    left:  10%;
+    animation-delay: 22s;
+    
+}
+
+.square li:nth-child(5){
+    top: 10%;
+    left:  80%;
+    animation-delay: 32s;
+    
+}
+
+.square_line li{
+    top:65%;
+    left:25%;
+    animation: square_line 6s  infinite;
+    animation-delay: 6s;
+}
+.square_line li:nth-child(2){
+    top:25%;
+    left:75%;
+    animation-delay: 12s;
+}
+.square_line li:nth-child(3){
+    top:60%;
+    left:67%;
+    animation-delay: 18s;
+}
+.square_line li:nth-child(4){
+    top:20%;
+    left:35%;
+    animation-delay: 24s;
+}
+.square_line li:nth-child(5){
+    top:45%;
+    left:5%;
+    animation-delay: 30s;
+    
+}
+
+.circle li {
+    left: 15%;
+    bottom: 0;
+    animation: circle 10s linear infinite;
+}
+.circle li:nth-child(2) {
+    left: 35%;
+    animation-delay: 15s;
+    
+}
+.circle li:nth-child(3) {
+    left: 55%;
+    animation-delay: 10s;
+    
+}
+.circle li:nth-child(7) {
+    left: 75%;
+    animation-delay: 27.5s;
+    
+}
+.circle li:nth-child(5) {
+    left: 95%;
+    animation-delay: 31.25s;
+}
+
+.circle_line li{
+    
+    left:  45%;
+    animation: circle 10s linear infinite;
+    animation-delay: 12s;
+}
+
+.circle_line li:nth-child(2){
+    left:25%;
+    animation-delay: 24s;
+}
+.circle_line li:nth-child(3){
+    animation-delay: 48s;
+    left:67%;
+}
+
+
+
+@keyframes square {
+
+    0%{
+        transform: scale(0) rotateY(0deg) rotateX(100deg);
+        opacity: 1;
+    }
+
+    60%{
+        transform: scale(3) rotateY(600deg) rotateX(0deg);
+        opacity: .4;
+
+    }
+
+    100%{
+        transform: scale(5) rotateY(1080deg);
+        opacity: 0;
+    }
+    
+}
+
+@keyframes square_line {
+
+    0%{
+        transform: scale(2) rotateY(0deg);
+        opacity: 1;
+    }
+
+    100%{
+        transform: scale(4) rotateY(1080deg);
+        opacity: 0;
+    }
+    
+}
+
+@keyframes circle {
+    0%{
+        transform: scale(0) rotate(0deg);
+        opacity: .95;
+        bottom: 0%;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: scale(5) rotate(1080deg);
+        opacity: 0;
+        bottom: 90%;
+        border-radius: 50%;
+    }
+    
+}
+
